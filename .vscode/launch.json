@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'discord-rpc-mpv'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=discord-rpc-mpv",
+                    "--package=discord-rpc-mpv",
+                    
+                ],
+                "filter": {
+                    "name": "discord-rpc-mpv",
+                    "kind": "bin"
+                }
+            },
+            "args": ["debug"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'discord-rpc-mpv'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=discord-rpc-mpv",
+                    "--package=discord-rpc-mpv"
+                ],
+                "filter": {
+                    "name": "discord-rpc-mpv",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
