@@ -127,6 +127,8 @@ fn client_manager(rx: Receiver<HashMap<String, String>>) {
 fn main() {
     let programs_to_look_for = ["mpv", "vlc"];
 
+    // let mut tray = TrayItem::new("discord-rpc-video-player", "").unwrap();
+    // tray.add_label("discord-rpc-video-player").unwrap();
     let (sx, rx) = channel();
     thread::spawn(|| client_manager(rx));
     let mut command = Command::new("/bin/ps");
